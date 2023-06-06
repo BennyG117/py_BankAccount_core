@@ -1,14 +1,3 @@
-
-#GOALS:
-"""
--create a class
--implement default arguments in parameters for attributes that can be assigned on instantiation
--implement the functionality of a bank account
--handle edge cases such as insufficient funds, with control structures like (if-else, code flow, or early exit)
--Students create and update attributes of an object instance from within the class using "self"
--test the functionality by creating instances and calling methods with diferent test data
-"""
-
 class BankAccount:
 
     def __init__(self, int_rate = 0.05, balance = 0): 
@@ -33,6 +22,7 @@ class BankAccount:
 
     def display_account_info(self):
         print(f'Your intrest rate is: {self.int_rate}\nYour current balance is: {self.balance}')
+        print('==================/n')
         return self
 
     def yield_interest(self):
@@ -40,15 +30,10 @@ class BankAccount:
             intrestGained = self.int_rate * self.int_rate
             self.balance += intrestGained
             print(f'You account balance plus intrest is: {self.balance}')
-            print('==================/n')
             return self
 
 Sokka = BankAccount()
+Toph = BankAccount(.10, 1070)
 
-Sokka.deposit(500)
-Sokka.withdraw(50)
-Sokka.display_account_info()
-Sokka.yield_interest()
-
-Sokka.deposit(1000).withdraw(1001).display_account_info().yield_interest()
-
+Sokka.deposit(10).deposit(100).deposit(40).withdraw(75).yield_interest().display_account_info()
+Toph.deposit(1000).deposit(2500).withdraw(400).withdraw(250).withdraw(200).withdraw(100).yield_interest().display_account_info()
