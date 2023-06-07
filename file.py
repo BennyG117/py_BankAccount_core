@@ -36,4 +36,5 @@ Sokka = BankAccount()
 Toph = BankAccount(.10, 1070)
 
 Sokka.deposit(10).deposit(100).deposit(40).withdraw(75).yield_interest().display_account_info()
+
 Toph.deposit(1000).deposit(2500).withdraw(400).withdraw(250).withdraw(200).withdraw(100).yield_interest().display_account_info()
